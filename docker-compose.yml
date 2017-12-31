@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: web
+    ports:
+    - 80:80/tcp
+    restart: always
+version: '3.1'
+
