@@ -1,4 +1,10 @@
 services:
+  mailhog:
+    container_name: mailhog
+    image: mailhog/mailhog:latest
+    ports:
+    - 1025:1025/tcp
+    - 8025:8025/tcp
   mysql:
     container_name: mysql
     environment:
@@ -16,6 +22,7 @@ services:
       dockerfile: Dockerfile
     container_name: web
     links:
+    - mailhog:mail
     - mysql:mysql
     ports:
     - 80:80/tcp
