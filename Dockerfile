@@ -17,6 +17,8 @@ RUN apt-get update \
 && wget -q "https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64" -O /usr/local/bin/mhsendmail \
 && wget -q "https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar" -O /usr/local/bin/phpcbf \
 && wget -q "https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar" -O /usr/local/bin/phpcs \
+&& wget -q "https://phar.phpunit.de/phpunit.phar" -O /usr/local/bin/phpunit \
 && chmod 755 /usr/local/bin/mhsendmail \
+&& chmod 755 /usr/local/bin/phpunit \
 && chmod 755 /usr/local/bin/phpcbf \
 && chmod 755 /usr/local/bin/phpcs
