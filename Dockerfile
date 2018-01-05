@@ -18,7 +18,9 @@ RUN apt-get update \
 && wget -q "https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar" -O /usr/local/bin/phpcbf \
 && wget -q "https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar" -O /usr/local/bin/phpcs \
 && wget -q "https://phar.phpunit.de/phpunit.phar" -O /usr/local/bin/phpunit \
+&& wget -q "http://phpdoc.org/phpDocumentor.phar" -O /usr/local/bin/phpdoc \
 && chmod 755 /usr/local/bin/mhsendmail \
 && chmod 755 /usr/local/bin/phpunit \
+&& chmod 755 /usr/local/bin/phpdoc \
 && chmod 755 /usr/local/bin/phpcbf \
 && chmod 755 /usr/local/bin/phpcs
