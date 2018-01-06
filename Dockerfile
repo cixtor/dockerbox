@@ -26,3 +26,7 @@ RUN apt-get update \
 && chmod 755 /usr/local/bin/phpcbf \
 && chmod 755 /usr/local/bin/phpcs \
 && chmod 755 /usr/local/bin/wp
+
+# wp core download --path="/var/www/html" --allow-root
+# wp core config --path="/var/www/html" --dbhost="mysql" --dbname="wordpress" --dbuser="admin" --dbpass="password" --extra-php="define(\"WP_DEBUG\", true);" --allow-root
+# wp core install --url="wordpress.test" --path="/var/www/html" --admin_user="admin" --admin_email="admin@wordpress.test" --admin_password="password" --title="Blog" --allow-root
