@@ -30,3 +30,4 @@ RUN apt-get update \
 # wp core download --path="/var/www/html" --allow-root
 # wp core config --path="/var/www/html" --dbhost="mysql" --dbname="wordpress" --dbuser="admin" --dbpass="password" --extra-php="define(\"WP_DEBUG\", true);" --allow-root
 # wp core install --url="wordpress.test" --path="/var/www/html" --admin_user="admin" --admin_email="admin@wordpress.test" --admin_password="password" --title="Blog" --allow-root
+# wp rewrite structure "/%year%/%monthnum%/%postname%/" --path="/var/www/html" --allow-root
