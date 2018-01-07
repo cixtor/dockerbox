@@ -34,3 +34,13 @@ RUN apt-get update \
 # wget "https://github.com/WP-API/Basic-Auth/archive/master.zip" -O /var/www/html/master.zip
 # unzip -d /var/www/html/wp-content/plugins/ -- /var/www/html/master.zip
 # wp plugin activate basic-auth --path="/var/www/html" --allow-root
+
+# svn co --quiet "https://develop.svn.wordpress.org/trunk/tests/phpunit/data/" "/var/www/html/data"
+# svn co --quiet "https://develop.svn.wordpress.org/trunk/tests/phpunit/includes/" "/var/www/html/includes"
+# wget -q "https://develop.svn.wordpress.org/trunk/wp-tests-config-sample.php" -O "/var/www/html/wp-tests-config.php"
+# sed -i "s:dirname( __FILE__ ) . '/src/':'/var/www/html/':" "/var/www/html/wp-tests-config.php"
+# sed -i "s/youremptytestdbnamehere/wordpress/" "/var/www/html/wp-tests-config.php"
+# sed -i "s/yourusernamehere/admin/" "/var/www/html/wp-tests-config.php"
+# sed -i "s/yourpasswordhere/password/" "/var/www/html/wp-tests-config.php"
+# sed -i "s/localhost/mysql/" "/var/www/html/wp-tests-config.php"
+# sed -i "s/example\.org/wordpress.test/g" "/var/www/html/wp-tests-config.php"
