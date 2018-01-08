@@ -33,7 +33,9 @@ RUN apt-get update \
 # wp rewrite structure "/%year%/%monthnum%/%postname%/" --path="/var/www/html" --allow-root
 # wget "https://github.com/WP-API/Basic-Auth/archive/master.zip" -O /var/www/html/master.zip
 # unzip -d /var/www/html/wp-content/plugins/ -- /var/www/html/master.zip
+# mv -- /var/www/html/wp-content/plugins/Basic-Auth-master /var/www/html/wp-content/plugins/basic-auth
 # wp plugin activate basic-auth --path="/var/www/html" --allow-root
+# rm -rf -- /var/www/html/master.zip
 
 # svn co --quiet "https://develop.svn.wordpress.org/trunk/tests/phpunit/data/" "/var/www/html/data"
 # svn co --quiet "https://develop.svn.wordpress.org/trunk/tests/phpunit/includes/" "/var/www/html/includes"
